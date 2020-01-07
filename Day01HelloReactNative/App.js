@@ -32,6 +32,7 @@ const App: () => React$Node = () => {
         <View>
           <Text style={styles.sectionTitle}> Hello React Native!</Text>
         </View>
+        
       </SafeAreaView>
     </>
   );
