@@ -24,16 +24,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-class Greeting extends Component {
-  render() {
-    return(
-    <View style={styles.sectionTitle}>
-      <Text> Hello {this.props.name}!</Text>
-    </View>
-    );
-  }
-}
-
 const App: () => React$Node = () => {
   return (
     <>
@@ -42,8 +32,6 @@ const App: () => React$Node = () => {
         <View>
           <Text style={styles.sectionTitle}> Hello React Native!</Text>
         </View>
-        
-        <Greeting name='Khai'></Greeting>
       </SafeAreaView>
     </>
   );
