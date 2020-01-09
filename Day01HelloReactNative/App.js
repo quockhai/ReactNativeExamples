@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,6 +24,16 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+class Greeting extends Component {
+  render() {
+    return(
+    <View style={styles.sectionTitle}>
+      <Text> Hello {this.props.name}!</Text>
+    </View>
+    );
+  }
+}
+
 const App: () => React$Node = () => {
   return (
     <>
@@ -33,6 +43,7 @@ const App: () => React$Node = () => {
           <Text style={styles.sectionTitle}> Hello React Native!</Text>
         </View>
         
+        <Greeting name='Khai'></Greeting>
       </SafeAreaView>
     </>
   );
@@ -45,6 +56,8 @@ const styles = StyleSheet.create({
     color: Colors.dark,
     textAlign: 'center',
     marginTop: 100,
+    justifyContent: "center",
+    alignItems:'center',
   },
 });
 
