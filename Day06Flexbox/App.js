@@ -28,17 +28,46 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={{
+        flex: 1,
+        flexDirection: 'column-reverse'
+        }}>
+
+      <View style={{
+        height: 300,
+      }}>
+      <View style={{
+        height: 100, 
+        flexDirection: 'row',
+        }}>
+
+        <View style={styles.skyblueBox} />
+        <View style={styles.steelblueBox} />
+      </View>
+
       <View style={{
         flex: 1, 
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'stretch',
-        alignContent: 'stretch'
+        alignContent: 'stretch',
         }}>
-        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+
+        <View style={styles.skyblueBox} />
+        <View style={styles.steelblueBox} />
+      </View>
+
+      <View style={{
+        flex: 1, 
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'stretch',
+        alignContent: 'stretch',
+        }}>
+
+        <View style={styles.skyblueBox} />
+        <View style={styles.steelblueBox} />
+      </View>
       </View>
       </SafeAreaView>
     </>
@@ -46,42 +75,25 @@ const App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  skyblueBox: {
+    flex: 1,
+    height: 100,
+    backgroundColor: 'skyblue',
+    marginLeft: 10,
+    marginRight: 5,
+    marginTop: 5,
+    marginBottom: 5
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  steelblueBox: {
+    flex: 1,
+    height: 100,
+    backgroundColor: 'steelblue',
+    marginLeft: 5,
+    marginRight: 10,
+    marginTop: 5,
+    marginBottom: 5
   },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  
 });
 
 export default App;
